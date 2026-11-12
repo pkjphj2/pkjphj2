@@ -46,15 +46,40 @@ B.S. Statistics, @HUFS
 
 ### Projects
 
+**R Analysis Toolkit** — 반복되는 분석을 테스트와 예제를 갖춘 R 패키지 9종으로
+
 | Project | Description | Keywords |
 |:---:|:---|:---|
-| R Analysis Toolkit | 생존 곡선·Table 1·흐름도·Sankey 등 반복 분석용 R 패키지 9종 | R Package, Survival |
-| Data Quality Check | 기관 간 데이터 품질 비교 도구 | Data QC |
-| Disclosure Checker | 데이터 반출 전 Excel·Word의 식별 위험 값 사전 점검 | Privacy |
-| AI Automation Server | 링크를 로컬 AI가 요약해 Notion에 저장 | n8n, Local LLM |
+| Survival Curves | Kaplan-Meier·누적 사건 곡선, risk table, log-rank | Survival Analysis |
+| Baseline Table | 군별 기저 특성표, PSM 전후 비교, 서식 있는 Excel 출력 | Table 1, SMD |
+| Cohort & Episodes | 대상자 흐름도, 연속 구간 생성, 지속·중단 판정 | Cohort |
+| Visualization | 상태 전이 Sankey, 전후 측정값 변화 추이 | ggplot2 |
+
+**Data Tools**
+
+| Project | Description | Keywords |
+|:---:|:---|:---|
+| Data Quality Check | 기관 간 데이터 품질 비교 | Data QC |
+| Disclosure Checker | 데이터 반출 전 Excel·Word의 식별 위험 값 점검 | Privacy |
+| Work Studio | 업무 기록·주간 보고·PDF를 한 창에서 | Desktop App |
+
+**AI & Automation**
+
+| Project | Description | Keywords |
+|:---:|:---|:---|
+| AI Automation Server | 링크를 로컬 AI가 요약해 Notion에 저장 | n8n, Ollama |
+| Clipboard AI | 복사한 글을 로컬 AI로 다듬는 메뉴바 앱 | Local LLM |
+| Photo Nest | 내 컴퓨터 안에서만 도는 AI 사진 라이브러리 | Local AI |
 | Work Memory Plugin | Claude·Codex가 업무 기록을 이어 쓰게 하는 플러그인 | Claude Code, MCP |
-| Reptile Care | 팻테일 게코 '콩이'의 다마고치형 사육일지 앱 | TypeScript |
+| Skill Hub | Claude Code·Codex Skill을 찾고 비교·관리하는 Mac 앱 | Swift |
+
+**Personal Apps**
+
+| Project | Description | Keywords |
+|:---:|:---|:---|
+| Reptile Care | 팻테일 게코 '콩이'의 다마고치형 사육일지 | TypeScript |
 | Local PDF Studio | 내 컴퓨터 안에서만 PDF 합치기·나누기·변환 | Desktop App |
+| Project Dashboard | 서버·앱·프로젝트 현황을 한눈에 | Python |
 
 ### Contact
 
