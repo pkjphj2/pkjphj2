@@ -16,10 +16,10 @@ M.S. Statistics, @HUFS
 
 ### 🔎 About
 
-다기관 의료데이터(EMR·OMOP-CDM·청구자료)로 코호트를 구축하고, 생존분석·성향점수·메타분석으로 근거를 만듭니다. 반복되는 분석은 R 패키지로, 불편한 일은 AI 코딩 도구로 작은 앱을 만들어 해결합니다.
+통계학을 바탕으로 대규모 데이터를 분석하고, 결과를 이해하기 쉬운 표·그래프·보고서로 전달합니다. 반복되는 분석은 R 패키지로, 불편한 일은 AI 코딩 도구로 작은 앱을 만들어 해결합니다.
 
-- `2025.07 ~ 현재` **에비드넷** 데이터사이언스팀 — RWD/RWE 분석, 치료제 시장·마케팅 리서치
-- `2024.10 ~ 2025.06` **분당서울대학교병원** 외부 분석연구원 — 청구자료 기반 CML 치료 성과·의료비 분석
+- `2025.07 ~ 현재` **에비드넷** 데이터사이언스팀 — 다기관 데이터 분석, 시장·마케팅 리서치
+- `2024.10 ~ 2025.06` **분당서울대학교병원** 외부 분석연구원 — 대규모 청구 데이터 기반 생존분석
 
 ### 📝 Tech Stack
 
@@ -28,20 +28,19 @@ M.S. Statistics, @HUFS
 ![SAS](https://img.shields.io/badge/SAS-0766D1?style=flat-square)
 ![R Shiny](https://img.shields.io/badge/R%20Shiny-1A162D?style=flat-square&logo=rstudioide&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![OMOP CDM](https://img.shields.io/badge/OMOP%20CDM-E05A2B?style=flat-square)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=claude&logoColor=white)
 ![Codex](https://img.shields.io/badge/Codex-000000?style=flat-square)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
 
-**Methods** — Survival Analysis · Cox · PSM / PS Weighting · Meta-analysis · Treatment Pathway
+**Methods** — Survival Analysis · Cox Regression · Propensity Score · Meta-analysis · Market Research
 
 ### 🛠️ What I Build
 
 | | 분야 | 대표 |
 |:---:|:---|:---|
-| 🧪 | **R 분석 툴킷** 9종 | KM 곡선, Table 1, 치료 지속성·중단, cohort flow, Sankey |
-| 🏥 | **RWD 업무 도구** | 병원 간 CDM 품질 비교, 데이터 반출 전 식별 위험 점검 |
+| 🧪 | **R 분석 툴킷** 9종 | 생존 곡선, Table 1, 대상자 흐름도, 상태 전이 Sankey, Excel 리포트 |
+| 📊 | **데이터 업무 도구** | 기관 간 데이터 품질 비교, 데이터 반출 전 식별 위험 점검 |
 | 🤖 | **AI · 자동화** | 링크 → 로컬 AI 요약 → Notion 저장, Claude·Codex 업무 기록 플러그인 |
 | 🦎 | **개인 앱** | 게코 사육일지, 로컬 PDF 도구, AI 사진 라이브러리 |
 
@@ -53,14 +52,14 @@ M.S. Statistics, @HUFS
 - `r-baseline-table1` 군별 기저 특성표, PSM 전후 비교
 - `r-table1-excel` Table 1을 서식 있는 Excel로
 - `r-cohort-flow` 대상자 선정 인원 검증과 흐름도
-- `r-grace-period` 처방 기록으로 치료 에피소드 만들기
-- `r-persistence` 치료 지속성 판정
-- `r-discontinuation` 치료 중단·전환·중도절단 정리
-- `r-sankey-diagram` 용량·치료 상태 전이 Sankey
+- `r-grace-period` 날짜 기록을 공백 규칙으로 묶어 연속 구간 만들기
+- `r-persistence` 구간 지속 여부 판정
+- `r-discontinuation` 중단·전환·중도절단 정리
+- `r-sankey-diagram` 상태 전이 Sankey 다이어그램
 - `r-paired-change` 전후 측정값 변화 요약·검정
 
-**🏥 RWD 업무 도구**
-- `cdm-dq` 병원 간 OMOP CDM 데이터 품질 비교
+**📊 데이터 업무 도구**
+- `cdm-dq` 기관 간 데이터 품질 비교
 - `drb-checker` 데이터 반출 전 Excel·Word 식별 위험 값 점검
 - `work-studio` 업무 기록·주간업무·반출 점검·PDF를 한 창에서
 
