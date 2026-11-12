@@ -42,7 +42,6 @@ B.S. Statistics, @HUFS
 - **Statistics** — Survival Analysis · Cox Regression · Propensity Score · Meta-analysis
 - **Data** — SQL · Data QC · Market Research
 - **AI / Automation** — Claude Code · Codex · Ollama (Local LLM) · n8n
-- **Tools** — R Packages · R Shiny · Desktop Apps
 
 ### Projects
 
