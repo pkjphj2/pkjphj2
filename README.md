@@ -25,7 +25,7 @@ B.S. Statistics, @HUFS
 - **분당서울대학교병원** — 외부 분석연구원 (2024.10 ~ 2025.06)
   - 대규모 청구 데이터 기반 생존분석
 - **HUFS** — 석사 (2024.09 ~ 2026.02)
-  - 이산형 생존자료를 위한 새로운 생존모형 제안
+  - 석사논문: [A novel discrete parametric survival model based on the alternative discrete hazard rate](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=6454e230431be04cffe0bdc3ef48d419)
 
 ### Tech Stack
 
@@ -44,6 +44,12 @@ B.S. Statistics, @HUFS
 - **AI / Automation** — Claude Code · Codex · Ollama (Local LLM) · n8n
 
 ### Projects
+
+**Research**
+
+| Project | Description | Keywords |
+|:---:|:---|:---|
+| [Discrete Hazard Model](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=6454e230431be04cffe0bdc3ef48d419) | 석사논문: 이산형 생존자료를 위한 가법 대안 위험률 모형 제안, 실데이터 3종 적용과 시뮬레이션, 전체 재현 코드 | Survival Analysis, MLE, Simulation |
 
 **R Analysis Toolkit** — 반복되는 분석을 테스트와 예제를 갖춘 R 패키지 9종으로
 
