@@ -8,6 +8,8 @@ M.S. Statistics, @HUFS
 
 B.S. Statistics, @HUFS
 
+<img src="assets/banner.svg" alt="Kaplan-Meier survival curves" width="100%" />
+
 </div>
 
 ---
@@ -16,7 +18,16 @@ B.S. Statistics, @HUFS
 
 통계학을 바탕으로 데이터를 분석하고, 결과를 이해하기 쉬운 표·그래프·보고서로 전달하는 데이터 사이언티스트입니다.
 
-반복되는 분석은 R 패키지로 만들고, 업무와 일상에서 불편한 일은 Claude Code·Codex 같은 AI 코딩 도구로 작은 앱을 만들어 해결합니다.
+```r
+> str(hyojin)
+List of 6
+ $ role  : chr "Data Scientist"
+ $ base  : chr "Statistics (B.S., M.S.) @ HUFS"
+ $ focus : chr [1:3] "Survival Analysis" "Statistical Modeling" "Reporting"
+ $ builds: chr [1:2] "R packages for repeated analyses" "small apps with AI coding tools"
+ $ tools : chr [1:5] "R" "SQL" "Python" "Claude Code" ...
+ $ pet   : chr "콩이 (fat-tailed gecko)"
+```
 
 ### Experience
 
