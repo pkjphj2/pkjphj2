@@ -31,6 +31,10 @@ List of 6
 
 ### Experience
 
+```r
+> hyojin$experience |> arrange(desc(start))
+```
+
 - **EvidNet** — Data Scientist (2025.07 ~ Present)
   - 다기관 데이터 분석, 통계 모델링, 시장·마케팅 리서치
 - **분당서울대학교병원** — 외부 분석연구원 (2024.10 ~ 2025.06)
@@ -39,6 +43,10 @@ List of 6
   - 석사논문: [A novel discrete parametric survival model based on the alternative discrete hazard rate](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=6454e230431be04cffe0bdc3ef48d419)
 
 ### Tech Stack
+
+```r
+> hyojin$tools
+```
 
 ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
@@ -55,6 +63,10 @@ List of 6
 - **AI / Automation** — Claude Code · Codex · Ollama (Local LLM) · n8n
 
 ### Projects
+
+```r
+> list.files("projects/")
+```
 
 **Research**
 
@@ -98,6 +110,10 @@ List of 6
 | Project Dashboard | 서버·앱·프로젝트 현황을 한눈에 | Python |
 
 ### Contact
+
+```r
+> contact(hyojin)
+```
 
 - [Email](mailto:blacklaye0322@naver.com)
 - [Portfolio](https://app.notion.com/p/Hyojin-Park-Portfolio-3ffca625b3e081caae35c21376fa154e)
