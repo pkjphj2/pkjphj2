@@ -36,7 +36,7 @@ List of 6
  $ focus : chr [1:3] "Survival Analysis" "Statistical Modeling" "Reporting"
  $ builds: chr [1:2] "R packages for repeated analyses" "small apps with AI coding tools"
  $ tools : chr [1:5] "R" "SQL" "Python" "Claude Code" ...
- $ pet   : chr "콩이 (fat-tailed gecko)"
+ $ pet   : chr [1:2] "콩이 (fat-tailed gecko)" "chubby white Maltese"
 ```
 
 ### Experience
@@ -103,12 +103,15 @@ projects
 > contact(hyojin)
 $email
 [1] "blacklaye0322@naver.com"
+
+$linkedin
+[1] "linkedin.com/in/효진-박-89834b366"
 ```
 
 [![Email](https://img.shields.io/badge/Email-03C75A?style=flat-square&logo=naver&logoColor=white)](mailto:blacklaye0322@naver.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=notion&logoColor=white)](https://app.notion.com/p/Hyojin-Park-Portfolio-3ffca625b3e081caae35c21376fa154e)
 [![Thesis](https://img.shields.io/badge/Thesis-RISS-1F4E9C?style=flat-square)](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=6454e230431be04cffe0bdc3ef48d419)
-<!-- LinkedIn badge: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square)](링크드인 주소) -->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square)](https://www.linkedin.com/in/%ED%9A%A8%EC%A7%84-%EB%B0%95-89834b366/)
 
 ---
 
