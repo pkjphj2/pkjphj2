@@ -75,13 +75,14 @@ $ai_automation
 > fs::dir_tree("projects")
 projects
 ├── research
-│   └── discrete-hazard-model    # 석사논문: 이산형 생존자료를 위한 가법 대안 위험률 모형
+│   └── discrete-hazard-thesis   # 석사논문: 이산형 생존자료를 위한 가법 대안 위험률 모형
 ├── r-toolkit                    # 테스트와 예제를 갖춘 R 패키지 9종
 │   ├── survival-curves          # Kaplan-Meier·누적 사건 곡선, risk table, log-rank
 │   ├── baseline-table           # 군별 기저 특성표, PSM 전후 비교, Excel 출력
 │   ├── cohort-and-episodes      # 대상자 흐름도, 연속 구간 생성, 지속·중단 판정
 │   └── visualization            # 상태 전이 Sankey, 전후 측정값 변화 추이
 ├── data-tools
+│   ├── r-masked-workbook        # 결과 엑셀 자동 생성 + 5 미만 셀 자동 마스킹
 │   ├── data-quality-check       # 기관 간 데이터 품질 비교
 │   ├── disclosure-checker       # 데이터 반출 전 Excel·Word의 식별 위험 값 점검
 │   └── work-studio              # 업무 기록·주간 보고·PDF를 한 창에서
@@ -90,6 +91,7 @@ projects
 │   ├── clipboard-ai             # 복사한 글을 로컬 AI로 다듬는 메뉴바 앱
 │   ├── photo-nest               # 내 컴퓨터 안에서만 도는 AI 사진 라이브러리
 │   ├── work-memory-plugin       # Claude·Codex가 업무 기록을 이어 쓰게 하는 플러그인
+│   ├── meeting-minutes-docx     # 회의 전사문을 서식 갖춘 Word 회의록으로
 │   └── skill-hub                # Claude Code·Codex Skill을 찾고 관리하는 Mac 앱
 └── personal-apps
     ├── reptile-care             # 팻테일 게코 '콩이'의 다마고치형 사육일지
