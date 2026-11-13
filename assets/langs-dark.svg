@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 144" width="360" height="144" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect x="0.5" y="0.5" width="359" height="143" rx="6" fill="#0d1117" stroke="#30363d"/>
+<text x="20" y="28" font-size="15" font-weight="600" fill="#58a6ff">Most Used Languages</text>
+<clipPath id="r"><rect x="20" y="44" width="320" height="10" rx="5"/></clipPath>
+<g clip-path="url(#r)"><rect x="20.0" y="44" width="195.3" height="10" fill="#7b61ff"/><rect x="215.3" y="44" width="51.7" height="10" fill="#e9b949"/><rect x="267.0" y="44" width="44.7" height="10" fill="#198CE7"/><rect x="311.7" y="44" width="27.2" height="10" fill="#F05138"/><rect x="339.0" y="44" width="0.7" height="10" fill="#89e051"/><rect x="339.6" y="44" width="0.4" height="10" fill="#8b949e"/></g>
+<g fill="#c9d1d9"><circle cx="25" cy="74" r="5" fill="#7b61ff"/><text x="36" y="78">TypeScript 61.0%</text><circle cx="190" cy="74" r="5" fill="#e9b949"/><text x="201" y="78">Python 16.2%</text><circle cx="25" cy="96" r="5" fill="#198CE7"/><text x="36" y="100">R 14.0%</text><circle cx="190" cy="96" r="5" fill="#F05138"/><text x="201" y="100">Swift 8.5%</text><circle cx="25" cy="118" r="5" fill="#89e051"/><text x="36" y="122">Shell 0.2%</text><circle cx="190" cy="118" r="5" fill="#8b949e"/><text x="201" y="122">PowerShell 0.1%</text></g>
+</svg>

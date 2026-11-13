@@ -10,7 +10,7 @@ USER = "pkjphj2"
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets")
 LEVEL = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
 GREEN = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
-EATEN = "#ebedf0"
+GREEN_DARK = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]  # GitHub dark-theme grid
 CELL, GAP, PAD = 11, 3, 20
 STEP = CELL + GAP
 
@@ -59,7 +59,8 @@ DUBU = """<g>MOTION
 </g>"""
 
 
-def gecko_svg(cells, dur=24.0, walk=0.9, lag=0.06):
+def gecko_svg(cells, dur=24.0, walk=0.9, lag=0.06, dark=False):
+    green = GREEN_DARK if dark else GREEN
     w = max(x for x, _, _ in cells) + CELL + PAD
     h = PAD * 2 + 7 * STEP - GAP
     # gecko moves at constant speed, so a cell is reached at its share of the path length
@@ -68,14 +69,14 @@ def gecko_svg(cells, dur=24.0, walk=0.9, lag=0.06):
         dist.append(dist[-1] + ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** 0.5)
     rects = []
     for i, (x, y, lv) in enumerate(cells):
-        rect = f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{GREEN[lv]}"'
+        rect = f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{green[lv]}"'
         if not lv:
             rects.append(rect + "/>")
             continue
         t = round(walk * dist[i] / dist[-1], 4)
         t2 = min(round(t + 0.002, 4), 0.999)
         # colour stays until the gecko reaches the cell, then it is eaten; resets each loop
-        rects.append(f'{rect}><animate attributeName="fill" values="{GREEN[lv]};{GREEN[lv]};{EATEN};{EATEN}" '
+        rects.append(f'{rect}><animate attributeName="fill" values="{green[lv]};{green[lv]};{green[0]};{green[0]}" '
                      f'keyTimes="0;{t};{t2};1" dur="{dur}s" repeatCount="indefinite"/></rect>')
     path = "M" + " L".join(f"{x + CELL / 2} {y + CELL / 2}" for x, y, _ in cells)
     # 두부 waits `lag` of the loop, then follows the same path; drawn first so 콩이 stays on top
@@ -91,7 +92,8 @@ LANG_COLORS = {"R": "#198CE7", "TypeScript": "#7b61ff", "Python": "#e9b949", "Ja
                "HTML": "#e34c26", "Swift": "#F05138", "CSS": "#563d7c", "Shell": "#89e051"}
 
 
-def langs_svg(top):
+def langs_svg(top, dark=False):
+    bg, line, title, text = ("#0d1117", "#30363d", "#58a6ff", "#c9d1d9") if dark else ("#fffefe", "#e4e2e2", "#2f80ed", "#434d58")
     total = sum(v for _, v in top)
     w, x, bar, legend = 360, 20, [], []
     for i, (name, v) in enumerate(top):
@@ -104,11 +106,11 @@ def langs_svg(top):
                       f'<text x="{lx + 16}" y="{ly}">{name} {100 * v / total:.1f}%</text>')
     h = 78 + ((len(top) + 1) // 2) * 22
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
-<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="6" fill="#fffefe" stroke="#e4e2e2"/>
-<text x="20" y="28" font-size="15" font-weight="600" fill="#2f80ed">Most Used Languages</text>
+<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="6" fill="{bg}" stroke="{line}"/>
+<text x="20" y="28" font-size="15" font-weight="600" fill="{title}">Most Used Languages</text>
 <clipPath id="r"><rect x="20" y="44" width="{w - 40}" height="10" rx="5"/></clipPath>
 <g clip-path="url(#r)">{''.join(bar)}</g>
-<g fill="#434d58">{''.join(legend)}</g>
+<g fill="{text}">{''.join(legend)}</g>
 </svg>"""
 
 
@@ -129,18 +131,22 @@ def write(name, svg):
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["gecko"]:
-        write("gecko.svg", gecko_svg(serpentine(calendar())))
+        cells = serpentine(calendar())
+        write("gecko.svg", gecko_svg(cells))
+        write("gecko-dark.svg", gecko_svg(cells, dark=True))
     elif sys.argv[1:] == ["langs"]:
         langs = repo_languages()
         for hidden in ("HTML", "CSS", "JavaScript"):  # markup bloats byte counts; JS left out by choice
             langs.pop(hidden, None)
         write("langs.svg", langs_svg(langs.most_common(6)))
+        write("langs-dark.svg", langs_svg(langs.most_common(6), dark=True))
     elif sys.argv[1:] == ["test"]:
         cells = serpentine([[(0, 1), (1, 0)], [(0, 0), (1, 2)]])
         assert [(c[0], c[1]) for c in cells] == [(20, 20), (20, 34), (34, 34), (34, 20)], cells
         svg = gecko_svg(cells)
         assert svg.count("<animate attributeName=\"fill\"") == 2 and svg.count("<animateMotion") == 2
         assert "100.0%" in langs_svg([("R", 5)])
+        assert "#0d1117" in langs_svg([("R", 5)], dark=True) and "#161b22" in gecko_svg(cells, dark=True)
         print("ok")
     else:
         sys.exit(__doc__)

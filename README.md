@@ -117,9 +117,15 @@ $linkedin
 
 <div align="center">
 
-<img src="assets/langs.svg" alt="Most used languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg" />
+  <img src="assets/langs.svg" alt="Most used languages" />
+</picture>
 
-<img src="assets/gecko.svg" alt="콩이가 잔디를 먹고 두부가 따라가는 중" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/gecko-dark.svg" />
+  <img src="assets/gecko.svg" alt="콩이가 잔디를 먹고 두부가 따라가는 중" width="100%" />
+</picture>
 
 <sub>콩이가 잔디를 먹고 두부가 따라가는 중 · 매일 자정 갱신</sub>
 
