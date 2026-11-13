@@ -138,8 +138,10 @@ if __name__ == "__main__":
         langs = repo_languages()
         for hidden in ("HTML", "CSS", "JavaScript", "TypeScript", "Shell", "PowerShell", "Batchfile"):  # markup and app/glue code left out by choice
             langs.pop(hidden, None)
-        write("langs.svg", langs_svg(langs.most_common(6)))
-        write("langs-dark.svg", langs_svg(langs.most_common(6), dark=True))
+        total = sum(langs.values())
+        top = [(k, v) for k, v in langs.most_common(6) if v >= 0.01 * total]  # drop <1% noise
+        write("langs.svg", langs_svg(top))
+        write("langs-dark.svg", langs_svg(top, dark=True))
     elif sys.argv[1:] == ["test"]:
         cells = serpentine([[(0, 1), (1, 0)], [(0, 0), (1, 2)]])
         assert [(c[0], c[1]) for c in cells] == [(20, 20), (20, 34), (34, 34), (34, 20)], cells
