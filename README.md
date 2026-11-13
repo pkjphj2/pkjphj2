@@ -109,7 +109,7 @@ $linkedin
 ```
 
 [![Email](https://img.shields.io/badge/Email-03C75A?style=flat-square&logo=naver&logoColor=white)](mailto:blacklaye0322@naver.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=notion&logoColor=white)](https://app.notion.com/p/Hyojin-Park-Portfolio-3ffca625b3e081caae35c21376fa154e)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=notion&logoColor=white)](https://billowy-mackerel-e08.notion.site/Hyojin-Park-Portfolio-3ffca625b3e081caae35c21376fa154e)
 [![Thesis](https://img.shields.io/badge/Thesis-RISS-1F4E9C?style=flat-square)](https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=6454e230431be04cffe0bdc3ef48d419)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square)](https://www.linkedin.com/in/%ED%9A%A8%EC%A7%84-%EB%B0%95-89834b366/)
 

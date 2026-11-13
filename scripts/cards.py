@@ -136,7 +136,7 @@ if __name__ == "__main__":
         write("gecko-dark.svg", gecko_svg(cells, dark=True))
     elif sys.argv[1:] == ["langs"]:
         langs = repo_languages()
-        for hidden in ("HTML", "CSS", "JavaScript", "TypeScript"):  # markup bloats byte counts; JS/TS (app code) left out by choice
+        for hidden in ("HTML", "CSS", "JavaScript", "TypeScript", "Shell", "PowerShell", "Batchfile"):  # markup and app/glue code left out by choice
             langs.pop(hidden, None)
         write("langs.svg", langs_svg(langs.most_common(6)))
         write("langs-dark.svg", langs_svg(langs.most_common(6), dark=True))
