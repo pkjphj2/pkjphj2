@@ -36,7 +36,7 @@ List of 6
  $ focus : chr [1:3] "Survival Analysis" "Statistical Modeling" "Reporting"
  $ builds: chr [1:2] "R packages for repeated analyses" "small apps with AI coding tools"
  $ tools : chr [1:5] "R" "SQL" "Python" "Claude Code" ...
- $ pet   : chr [1:2] "콩이 (fat-tailed gecko)" "chubby white Maltese"
+ $ pet   : chr [1:2] "콩이 (fat-tailed gecko)" "두부 (chubby white Maltese)"
 ```
 
 ### Experience
@@ -119,8 +119,8 @@ $linkedin
 
 <img src="assets/langs.svg" alt="Most used languages" />
 
-<img src="assets/gecko.svg" alt="콩이가 잔디를 먹는 중" width="100%" />
+<img src="assets/gecko.svg" alt="콩이가 잔디를 먹고 두부가 따라가는 중" width="100%" />
 
-<sub>콩이가 잔디를 먹는 중 · 매일 자정 갱신</sub>
+<sub>콩이가 잔디를 먹고 두부가 따라가는 중 · 매일 자정 갱신</sub>
 
 </div>

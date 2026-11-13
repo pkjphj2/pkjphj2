@@ -46,8 +46,20 @@ GECKO = """<g>MOTION
  <circle cx="13" cy="-2.6" r="1.4" fill="#222"/><circle cx="13" cy="2.6" r="1.4" fill="#222"/>
 </g>"""
 
+# 두부: chubby white Maltese, top view facing +x, trotting behind 콩이
+DUBU = """<g>MOTION
+ <g stroke="#d6d6d6" stroke-width="1" fill="#fff">
+  <circle cx="-13" cy="0" r="3.5"/>
+  <ellipse cx="-1" cy="0" rx="12" ry="9"><animate attributeName="ry" values="9;8.3;9" dur="0.4s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="11" cy="-6" rx="3.5" ry="4.5"/><ellipse cx="11" cy="6" rx="3.5" ry="4.5"/>
+  <circle cx="13" cy="0" r="6.5"/>
+ </g>
+ <circle cx="15" cy="-2.6" r="1.2" fill="#222"/><circle cx="15" cy="2.6" r="1.2" fill="#222"/>
+ <circle cx="19.2" cy="0" r="1.5" fill="#222"/>
+</g>"""
 
-def gecko_svg(cells, dur=24.0, walk=0.9):
+
+def gecko_svg(cells, dur=24.0, walk=0.9, lag=0.06):
     w = max(x for x, _, _ in cells) + CELL + PAD
     h = PAD * 2 + 7 * STEP - GAP
     # gecko moves at constant speed, so a cell is reached at its share of the path length
@@ -66,8 +78,11 @@ def gecko_svg(cells, dur=24.0, walk=0.9):
         rects.append(f'{rect}><animate attributeName="fill" values="{GREEN[lv]};{GREEN[lv]};{EATEN};{EATEN}" '
                      f'keyTimes="0;{t};{t2};1" dur="{dur}s" repeatCount="indefinite"/></rect>')
     path = "M" + " L".join(f"{x + CELL / 2} {y + CELL / 2}" for x, y, _ in cells)
+    # 두부 waits `lag` of the loop, then follows the same path; drawn first so 콩이 stays on top
+    dubu = f'<animateMotion path="{path}" rotate="auto" keyPoints="0;0;1;1" keyTimes="0;{lag};{walk + lag};1" calcMode="linear" dur="{dur}s" repeatCount="indefinite"/>'
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">
 {chr(10).join(rects)}
+{DUBU.replace("MOTION", dubu)}
 {GECKO.replace("MOTION", f'<animateMotion path="{path}" rotate="auto" keyPoints="0;1;1" keyTimes="0;{walk};1" calcMode="linear" dur="{dur}s" repeatCount="indefinite"/>')}
 </svg>"""
 
@@ -124,7 +139,7 @@ if __name__ == "__main__":
         cells = serpentine([[(0, 1), (1, 0)], [(0, 0), (1, 2)]])
         assert [(c[0], c[1]) for c in cells] == [(20, 20), (20, 34), (34, 34), (34, 20)], cells
         svg = gecko_svg(cells)
-        assert svg.count("<animate attributeName=\"fill\"") == 2 and "animateMotion" in svg
+        assert svg.count("<animate attributeName=\"fill\"") == 2 and svg.count("<animateMotion") == 2
         assert "100.0%" in langs_svg([("R", 5)])
         print("ok")
     else:
