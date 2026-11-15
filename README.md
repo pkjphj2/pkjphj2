@@ -36,7 +36,7 @@ List of 6
  $ focus : chr [1:3] "Survival Analysis" "Statistical Modeling" "Reporting"
  $ builds: chr [1:2] "R packages for repeated analyses" "small apps with AI coding tools"
  $ tools : chr [1:5] "R" "SQL" "Python" "Claude Code" ...
- $ pet   : chr [1:2] "콩이 (fat-tailed gecko)" "두부 (chubby white Maltese)"
+ $ pet   : chr [1:2] "Kongi (fat-tailed gecko)" "Dubu (chubby white Maltese)"
 ```
 
 ### Experience
@@ -44,9 +44,9 @@ List of 6
 ```r
 > hyojin$experience |> arrange(desc(start))
 [[1]] EvidNet · Data Scientist · 2025.07 ~ present
-      다기관 데이터 분석, 통계 모델링, 시장·마케팅 리서치
-[[2]] 분당서울대학교병원 · 외부 분석연구원 · 2024.10 ~ 2025.06
-      대규모 청구 데이터 기반 생존분석
+      Multi-site data analysis, statistical modeling, market research
+[[2]] Seoul National University Bundang Hospital · External Research Analyst · 2024.10 ~ 2025.06
+      Survival analysis on large-scale claims data
 [[3]] HUFS · M.S. Statistics · 2024.09 ~ 2026.02
       thesis: A novel discrete parametric survival model
               based on the alternative discrete hazard rate
@@ -75,28 +75,28 @@ $ai_automation
 > fs::dir_tree("projects")
 projects
 ├── research
-│   └── discrete-hazard-thesis   # 석사논문: 이산형 생존자료를 위한 가법 대안 위험률 모형
-├── r-toolkit                    # 테스트와 예제를 갖춘 R 패키지 9종
-│   ├── survival-curves          # Kaplan-Meier·누적 사건 곡선, risk table, log-rank
-│   ├── baseline-table           # 군별 기저 특성표, PSM 전후 비교, Excel 출력
-│   ├── cohort-and-episodes      # 대상자 흐름도, 연속 구간 생성, 지속·중단 판정
-│   └── visualization            # 상태 전이 Sankey, 전후 측정값 변화 추이
+│   └── discrete-hazard-thesis   # M.S. thesis: additive alternative hazard model for discrete survival data
+├── r-toolkit                    # 9 R packages with tests and examples
+│   ├── survival-curves          # Kaplan-Meier & cumulative incidence curves, risk table, log-rank
+│   ├── baseline-table           # Baseline tables by group, pre/post-PSM comparison, Excel output
+│   ├── cohort-and-episodes      # Cohort flow diagrams, continuous episodes, persistence/discontinuation
+│   └── visualization            # State-transition Sankey, before/after measurement trends
 ├── data-tools
-│   ├── r-masked-workbook        # 결과 엑셀 자동 생성 + 5 미만 셀 자동 마스킹
-│   ├── data-quality-check       # 기관 간 데이터 품질 비교
-│   ├── disclosure-checker       # 데이터 반출 전 Excel·Word의 식별 위험 값 점검
-│   └── work-studio              # 업무 기록·주간 보고·PDF를 한 창에서
+│   ├── r-masked-workbook        # Auto-generated result workbooks + masking of cells under 5
+│   ├── data-quality-check       # Cross-site data quality comparison
+│   ├── disclosure-checker       # Scans Excel/Word for identifying values before data export
+│   └── work-studio              # Work logs, weekly reports and PDFs in one window
 ├── ai-automation
-│   ├── ai-automation-server     # 링크를 로컬 AI가 요약해 Notion에 저장
-│   ├── clipboard-ai             # 복사한 글을 로컬 AI로 다듬는 메뉴바 앱
-│   ├── photo-nest               # 내 컴퓨터 안에서만 도는 AI 사진 라이브러리
-│   ├── work-memory-plugin       # Claude·Codex가 업무 기록을 이어 쓰게 하는 플러그인
-│   ├── meeting-minutes-docx     # 회의 전사문을 서식 갖춘 Word 회의록으로
-│   └── skill-hub                # Claude Code·Codex Skill을 찾고 관리하는 Mac 앱
+│   ├── ai-automation-server     # Local AI summarizes links and saves them to Notion
+│   ├── clipboard-ai             # Menu-bar app that polishes copied text with local AI
+│   ├── photo-nest               # AI photo library that runs entirely on-device
+│   ├── work-memory-plugin       # Plugin that lets Claude & Codex share work history
+│   ├── meeting-minutes-docx     # Turns meeting transcripts into formatted Word minutes
+│   └── skill-hub                # Mac app to find and manage Claude Code & Codex skills
 └── personal-apps
-    ├── reptile-care             # 팻테일 게코 '콩이'의 다마고치형 사육일지
-    ├── local-pdf-studio         # 내 컴퓨터 안에서만 PDF 합치기·나누기·변환
-    └── project-dashboard        # 서버·앱·프로젝트 현황을 한눈에
+    ├── reptile-care             # Tamagotchi-style care log for Kongi the fat-tailed gecko
+    ├── local-pdf-studio         # Merge, split and convert PDFs fully offline
+    └── project-dashboard        # Servers, apps and projects at a glance
 ```
 
 ### Contact
