@@ -31,7 +31,7 @@ B.S. Statistics, @HUFS
 ```r
 > str(hyojin)
 List of 6
- $ role  : chr "Data Scientist"
+ $ role  : chr "Data Scientist / Statistician"
  $ base  : chr "Statistics (B.S., M.S.) @ HUFS"
  $ focus : chr [1:3] "Survival Analysis" "Statistical Modeling" "Reporting"
  $ builds: chr [1:2] "R packages for repeated analyses" "small apps with AI coding tools"
