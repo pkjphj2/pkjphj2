@@ -2,7 +2,7 @@
 
 ## Hyojin Park (박효진)
 
-**Data Scientist**
+**Data Scientist / Statistician**
 
 M.S. Statistics, @HUFS
 
