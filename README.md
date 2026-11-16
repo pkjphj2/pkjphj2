@@ -75,14 +75,14 @@ $ai_automation
 > fs::dir_tree("projects")
 projects
 ├── research
-│   └── discrete-hazard-thesis   # M.S. thesis: additive alternative hazard model for discrete survival data
+│   └── discrete-hazard-thesis   # [public] M.S. thesis: additive alternative hazard model for discrete survival data
 ├── r-toolkit                    # 9 R packages with tests and examples
 │   ├── survival-curves          # Kaplan-Meier & cumulative incidence curves, risk table, log-rank
 │   ├── baseline-table           # Baseline tables by group, pre/post-PSM comparison, Excel output
 │   ├── cohort-and-episodes      # Cohort flow diagrams, continuous episodes, persistence/discontinuation
 │   └── visualization            # State-transition Sankey, before/after measurement trends
 ├── data-tools
-│   ├── r-masked-workbook        # Auto-generated result workbooks + masking of cells under 5
+│   ├── r-masked-workbook        # [public] Auto-generated result workbooks + masking of cells under 5
 │   ├── data-quality-check       # Cross-site data quality comparison
 │   ├── disclosure-checker       # Scans Excel/Word for identifying values before data export
 │   └── work-studio              # Work logs, weekly reports and PDFs in one window
@@ -90,8 +90,8 @@ projects
 │   ├── ai-automation-server     # Local AI summarizes links and saves them to Notion
 │   ├── clipboard-ai             # Menu-bar app that polishes copied text with local AI
 │   ├── photo-nest               # AI photo library that runs entirely on-device
-│   ├── work-memory-plugin       # Plugin that lets Claude & Codex share work history
-│   ├── meeting-minutes-docx     # Turns meeting transcripts into formatted Word minutes
+│   ├── work-memory-plugin       # [public] Plugin that lets Claude & Codex share work history
+│   ├── meeting-minutes-docx     # [public] Turns meeting transcripts into formatted Word minutes
 │   └── skill-hub                # Mac app to find and manage Claude Code & Codex skills
 └── personal-apps
     ├── reptile-care             # Tamagotchi-style care log for Kongi the fat-tailed gecko
