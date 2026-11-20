@@ -96,7 +96,8 @@ projects
 └── personal-apps
     ├── reptile-care             # Tamagotchi-style care log for Kongi the fat-tailed gecko
     ├── local-pdf-studio         # Merge, split and convert PDFs fully offline
-    └── project-dashboard        # Servers, apps and projects at a glance
+    ├── project-dashboard        # Servers, apps and projects at a glance
+    └── cursor-reminder          # [public] Cat popup that follows your cursor until you do the thing
 ```
 
 ### Contact
